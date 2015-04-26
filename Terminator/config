@@ -1,0 +1,22 @@
+[global_config]
+  title_transmit_bg_color = "#000000"
+  title_transmit_fg_color = "#000000"
+  title_inactive_bg_color = "#000000"
+[keybindings]
+  hide_window = <Shift><Control>a
+[profiles]
+  [[default]]
+    background_darkness = 1.39
+    palette = ""
+    font = Ubuntu\ Mono 9
+    scrollbar_position = disabled
+    foreground_color = ""
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
