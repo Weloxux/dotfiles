@@ -6,11 +6,14 @@
   hide_window = <Shift><Control>a
 [profiles]
   [[default]]
-    background_darkness = 1.39
-    palette = ""
+    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+    background_darkness = 0.9
+    background_type = transparent
+    scrollbar_position = hidden
+    foreground_color = "#ffffff"
+    show_titlebar = False
     font = Ubuntu\ Mono 9
-    scrollbar_position = disabled
-    foreground_color = ""
+    background_color = "#32383b"
 [layouts]
   [[default]]
     [[[child1]]]

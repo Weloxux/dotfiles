@@ -9,6 +9,7 @@
 #### ~/documents/shellscripts/
 
  * desktopterm.sh
+ * art.sh
  
  
 #### ~/.config/openbox/
