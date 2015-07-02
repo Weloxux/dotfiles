@@ -4,6 +4,7 @@
 
  * .conkyrc
  * .bashrc
+ * .vimrc
  
  
 #### ~/documents/shellscripts/
