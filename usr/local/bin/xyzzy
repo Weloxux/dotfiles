@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Nothing happens."
+
+exit 0

@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# options
+account="vivesce.re"
+sshuri="ssh.vivesce.re"
+host="https://vivesce.re"
+folder="ssu"
+
+goodname=false
+
+while [ ! "$goodname" == true ]
+do
+	newname=$RANDOM
+	if curl --output /dev/null --silent --head --fail "$host/$folder/$newname.png"
+		then echo "File already exists! Trying new url."
+		else goodname=true
+	fi
+done
+
+if [ -z $1 ]
+then
+	echo "Please specify a file"
+else
+	if scp $1 "$account@$sshuri:/www/$folder/$newname.png"
+	then
+		echo "Screenshot uploaded to $host/$folder/$newname.png"
+	else
+		echo "Upload failed"
+	fi
+fi
+
+exit 0
