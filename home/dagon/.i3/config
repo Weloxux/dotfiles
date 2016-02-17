@@ -15,7 +15,8 @@ set $mod Mod4
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+#font pango:DejaVu Sans Mono 8
+font pango:Terminus 9
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -119,8 +120,11 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+m exec "dm-tool lock"
+bindsym $mod+Shift+m exec "i3lock"
 bindsym $mod+Shift+n exec "systemctl poweroff"
+
+bindsym $mod+Shift+k+o exec "setxkbmap us"
+bindsym $mod+Shift+k+p exec "setxkbmap se"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -152,7 +156,34 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+	colors {
+		background #2E3436
+		statusline #ffffff
+		separator #666666
+
+		focused_workspace  ##0C1214 #2E3436 #D8D8D8
+		active_workspace   #333333 #5f676a #ffffff
+		inactive_workspace #333333 #222222 #888888
+		urgent_workspace   #2f343a #900000 #ffffff
+	}
 }
 
+# Colours
+client.focused #0C1214 #2E3436 #D8D8D8
+client.unfocused #B6B6B6 #D8D8D8 #2E3436
+client.focused_inactive #333333 #333333 #D8D8D8
+client.urgent #383a3b #383a3b #ee0000
+
+# Hide ugly title bars from all windows
+new_window none
+new_float none
+
+# Hide edge borders
+hide_edge_borders both
+
+# Fix the screen
 exec --no-startup-id xrandr -s 1920x1080
 exec --no-startup-id feh --bg-scale /home/dagon/Pictures/Wallpapers/owl1.jpg
+
+# Get rid of terminal beeps, system-wide! woo!
+exec --no-startup-id xset -b
