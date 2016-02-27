@@ -1,21 +1,49 @@
 " ------------------------------------------ "
 " .vimrc                                     "
 " Author: Marnix Massar <marnix@vivesce.re>  "
-" Date: November 22nd 2015                       "
+" Date: 27th February 2016                   "
 "                                            "
 " This file is licensed under the Unlicense  "
 " ------------------------------------------ "
 
-" Change to elflord, because it looks good
+" Get rid of retarded compatibility mode
+set nocompatible
+filetype off
+
+" Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Vundle plugins
+Plugin 'VundleVim/vundle.vim' " required
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kshenoy/vim-signature'
+Plugin 'ervandew/supertab'
+Plugin 'kien/rainbow_parentheses.vim'
+
+" More Vundle
+call vundle#end()
+filetype plugin indent on
+
+" Lightline
+let g:lightline = {
+      \ 'component': {
+      \   'readonly': '%{&readonly?"x":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '|', 'right': '|' }
+      \ }
+set laststatus=2 " To make lightline show up
+
 set t_Co=256  " make use of 256 terminal colors 
-colorscheme elflord
+colorscheme jellybeans
 sy on
 
 " Set the encoding to utf-8
 set encoding=utf-8
 
-" Get rid of retarded compatibility mode
-set nocompatible
 
 " Disable modelines, because of security exploits
 set modelines=0
@@ -53,3 +81,4 @@ let g:rainbow_active = 1
 " Easier window switching
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
+
