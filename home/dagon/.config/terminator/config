@@ -17,13 +17,14 @@
     scroll_on_output = False
     show_titlebar = False
     color_scheme = custom
-    font = DejaVu Sans Mono 11
+    font = Terminus 12
     background_color = "#2e3436"
     scrollback_infinite = True
   [[solarized]]
+    scrollbar_position = hidden
     use_system_font = False
     cursor_shape = ibeam
-    scrollbar_position = hidden
+    background_image = None
     foreground_color = "#839496"
     show_titlebar = False
     font = DejaVu Sans Mono 11

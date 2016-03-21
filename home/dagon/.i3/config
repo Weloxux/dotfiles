@@ -161,7 +161,7 @@ bar {
 		statusline #ffffff
 		separator #666666
 
-		focused_workspace  ##0C1214 #2E3436 #D8D8D8
+		focused_workspace  #8AE234 #2E3436 #D8D8D8
 		active_workspace   #333333 #5f676a #ffffff
 		inactive_workspace #333333 #222222 #888888
 		urgent_workspace   #2f343a #900000 #ffffff
@@ -183,7 +183,7 @@ hide_edge_borders both
 
 # Fix the screen
 exec --no-startup-id xrandr -s 1920x1080
-exec --no-startup-id feh --bg-scale /home/dagon/Pictures/Wallpapers/owl1.jpg
+exec --no-startup-id feh --bg-scale /home/dagon/Pictures/Wallpapers/pattern.jpg
 
 # Get rid of terminal beeps, system-wide! woo!
 exec --no-startup-id xset -b

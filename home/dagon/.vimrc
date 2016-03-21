@@ -15,12 +15,11 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Vundle plugins
-Plugin 'VundleVim/vundle.vim' " required
+Plugin 'VundleVim/Vundle.vim' " required
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kshenoy/vim-signature'
-Plugin 'ervandew/supertab'
 Plugin 'kien/rainbow_parentheses.vim'
 
 " More Vundle

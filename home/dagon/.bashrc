@@ -96,3 +96,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Vim keeeeeeeeeeeeeys
+set -o vi
