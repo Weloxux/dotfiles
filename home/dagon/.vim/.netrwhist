@@ -1,5 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/etc/apt/apt.conf.d'
-let g:netrw_dirhist_2='/etc/apt'
-let g:netrw_dirhist_3='/boot/grub/i386-pc'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/dagon/.m2/repository'
+let g:netrw_dirhist_2='/home/dagon/Git/eah'
+let g:netrw_dirhist_3='/home/dagon/Git/eah/sql'
+let g:netrw_dirhist_4='/var/www/html'
+let g:netrw_dirhist_5='/home/dagon/.config/ranger'
+let g:netrw_dirhist_6='/home/dagon/Git/batman'
+let g:netrw_dirhist_7='/home/dagon/.vim'

@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -82,10 +82,16 @@ fi
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
+# aliases
+alias l='ls'
 alias ll='ls -l'
 alias la='ls -a'
+alias v='vim'
 alias vi='vim'
+alias lily='lilypond'
+alias c='cacaview'
+alias g='grep'
+alias m='more'
 
 # enable programmable completion features
 if ! shopt -oq posix; then
@@ -96,5 +102,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Vim keeeeeeeeeeeeeys
-set -o vi
+JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/dagon/.sdkman"
+[[ -s "/home/dagon/.sdkman/bin/sdkman-init.sh" ]] && source "/home/dagon/.sdkman/bin/sdkman-init.sh"

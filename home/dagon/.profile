@@ -27,3 +27,7 @@ export EDITOR=vim
 
 # Make capslock act like escape
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/dagon/.sdkman"
+[[ -s "/home/dagon/.sdkman/bin/sdkman-init.sh" ]] && source "/home/dagon/.sdkman/bin/sdkman-init.sh"
