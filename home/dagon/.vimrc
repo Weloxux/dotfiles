@@ -23,6 +23,7 @@ Plugin 'kshenoy/vim-signature'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'LumenAstralis/lilypond-vim'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'aliva/vim-fish'
 
 " More Vundle
 call vundle#end()
